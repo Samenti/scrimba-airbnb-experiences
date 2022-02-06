@@ -1,23 +1,22 @@
 import React from 'react';
 import ratingStar from '../images/star.png';
-import swimmerKatieZaferes from '../images/katie-zaferes.png';
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="card">
       <img 
-        src={swimmerKatieZaferes} 
+        src={props.img} 
         className="card--image"
-        alt="Katie Zaferes"
+        alt={props.imgAlt}
       />
       <div className="card--stats">
         <img src={ratingStar} className="card--star" alt="star" />
-        <span>5.0</span>
-        <span className="gray">(6) • </span>
-        <span className="gray">USA</span>
+        <span>{props.rating}</span>
+        <span className="gray">({props.reviewCount}) • </span>
+        <span className="gray">{props.country}</span>
       </div>
-      <p>Life Lessons with Katie Zaferes</p>
-      <p><span className="bold">From $136</span> / person</p>
+      <p>{props.title}</p>
+      <p><span className="bold">From ${props.price}</span> / person</p>
     </div>
   );
 };
