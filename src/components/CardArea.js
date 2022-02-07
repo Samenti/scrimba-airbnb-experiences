@@ -7,14 +7,8 @@ export default function CardArea() {
   const cardArray = data.map(card => {
     return (
       <Card 
-        title = {card.title}
-        description = {card.description}
-        price = {card.price}
-        coverImg = {card.coverImg}
-        rating = {card.stats.rating}
-        reviewCount = {card.stats.reviewCount}
-        location = {card.location}
-        openSpots = {card.openSpots}
+        // spread all the properties individually
+        {...card}
         // non-prop:
         key = {card.id}
       />

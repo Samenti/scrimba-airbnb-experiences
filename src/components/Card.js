@@ -24,8 +24,8 @@ export default function Card(props) {
           className="card--star"
           alt="star"
         />
-        <span>{props.rating}</span>
-        <span className="gray">({props.reviewCount}) • </span>
+        <span>{props.stats.rating}</span>
+        <span className="gray">({props.stats.reviewCount}) • </span>
         <span className="gray">{props.location}</span>
       </div>
       <p className="card--title">{props.title}</p>
