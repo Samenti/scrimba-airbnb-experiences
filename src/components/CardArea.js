@@ -7,7 +7,6 @@ export default function CardArea() {
   const cardArray = data.map(card => {
     return (
       <Card 
-        id = {card.id}
         title = {card.title}
         description = {card.description}
         price = {card.price}
